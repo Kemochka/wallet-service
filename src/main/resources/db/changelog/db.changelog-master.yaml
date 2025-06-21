@@ -1,17 +1,8 @@
 databaseChangeLog:
   - changeSet:
       id: 1
-      author: test
+      author: kemochka
       changes:
-        - createTable:
-            tableName: test_table
-            columns:
-              - column:
-                  name: id
-                  type: BIGINT
-                  autoIncrement: true
-                  constraints:
-                    primaryKey: true
-              - column:
-                  name: name
-                  type: VARCHAR(255)
+        - sqlFile:
+            path: scripts/001_ddl_create_table_wallets.sql
+            relativeToChangelogFile: true
