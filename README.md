@@ -8,15 +8,16 @@
 
 ### Запуск с Docker Compose
 В проекте настроен docker-compose.yml для запуска PostgreSQL и приложения Wallet Service.
-1. Создайте файл .env на основе`.env.example` в корне проекта со следующими переменными:
+1. Склонируйте репозиторий `git clone`
+2. Создайте файл .env на основе`.env.example` в корне проекта со следующими переменными:
 - `POSTGRES_DB=wallet_db`
 - `POSTGRES_USER=your_db_user`
 - `POSTGRES_PASSWORD=your_password`
 - `SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/wallet_db`
 - `SPRING_DATASOURCE_USERNAME=your_db_user`
 - `SPRING_DATASOURCE_PASSWORD=your_password`
-2. Запустите контейнеры `docker-compose up --build`
-3. Сервис будет доступен по адресу: http://localhost:8081/api/v1
+3. Запустите контейнеры `docker-compose up --build`
+4. Сервис будет доступен по адресу: http://localhost:8081/api/v1
 
 ### Конфигурация приложения
 - Подключение к базе данных PostgreSQL настроено через переменные окружения.
